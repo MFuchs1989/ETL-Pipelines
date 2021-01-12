@@ -122,28 +122,31 @@ In the following I show the individual steps that are used in the respective ETL
 
 ### Simple_Pipeline
 
-
 ![Overview_Simple_Pipeline](images/Overview_Simple_Pipeline.png)
 ![Legend](images/Legend.png)
 
-<a name="classify_dog_breeds"></a>
+<a name="pipeline_with_join"></a>
 
-### Classify Dog Breeds
+### Pipeline_with_join
 
-I used transfer learning to create a convolutional neural network (CNN). I used this to determine the breed of dog from dog pictures. 
+![Overview_Pipeline_with_join](images/Overview_Pipeline_with_join.png)
+![Legend](images/Legend.png)
 
-+ If a dog is recognised in the image supplied, the algorithm returns the corresponding breed:
+<a name="pipeline_with_join2"></a>
 
-![pic_readme2](images/pic_readme2.png)
+### Pipeline_with_join2
 
-![pic_readme3](images/pic_readme3.png)
+![Overview_Pipeline_with_join2](images/Overview_Pipeline_with_join2.png)
+![Legend](images/Legend.png)
 
-+ If a human is recognised in the image provided, the algorithm returns the resembling dog breed:
+<a name="pipeline_with_intermediate_storage"></a>
 
-![pic_readme4](images/pic_readme4.png)
+### Pipeline_with_intermediate_storage
+
+![Overview_Pipeline_with_intermediate_storage](images/Overview_Pipeline_with_intermediate_storage.png)
+![Legend](images/Legend.png)
 
 
-+ If neither a human nor a dog can be seen in the picture, the algorithm returns the following error message: "Error: Please input an image of a human or a dog."
 
 <a name="project_results"></a>
 
