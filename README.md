@@ -123,27 +123,27 @@ In the following I show the individual steps that are used in the respective ETL
 ### Simple_Pipeline
 
 ![Overview_Simple_Pipeline](images/Overview_Simple_Pipeline.png)
-![Legend](images/Legend.png)
 
 <a name="pipeline_with_join"></a>
 
 ### Pipeline_with_join
 
 ![Overview_Pipeline_with_join](images/Overview_Pipeline_with_join.png)
-![Legend](images/Legend.png)
 
 <a name="pipeline_with_join2"></a>
 
 ### Pipeline_with_join2
 
 ![Overview_Pipeline_with_join2](images/Overview_Pipeline_with_join2.png)
-![Legend](images/Legend.png)
 
 <a name="pipeline_with_intermediate_storage"></a>
 
 ### Pipeline_with_intermediate_storage
 
 ![Overview_Pipeline_with_intermediate_storage](images/Overview_Pipeline_with_intermediate_storage.png)
+
+Corresponding legend:
+
 ![Legend](images/Legend.png)
 
 
