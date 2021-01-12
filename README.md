@@ -124,6 +124,8 @@ In the following I show the individual steps that are used in the respective ETL
 
 ![Overview_Simple_Pipeline](images/Overview_Simple_Pipeline.png)
 
+--------------------------------------------------------------------------------------------------------
+
 <a name="pipeline_with_join"></a>
 
 ### Pipeline_with_join
