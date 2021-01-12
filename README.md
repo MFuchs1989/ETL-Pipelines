@@ -1,12 +1,10 @@
 
-# Data Scientist Nanodegree: Capstone Project
+# ETL-Pipelines with Python
 
 
 ![etl_main_pic](images/pipelines.png)
 
-The purpose of this project is to use a convolutional neural network (CNN) to predict dog breeds. The pipeline is the evaluation of an image as a dog or a human, then a prediction of which dog breed the dog is, or which dog breed the human most resembles. 
-
-How I proceeded exactly and what results I achieved can be read in my blog post: [Classification of Dog-Breeds using a pre-trained CNN model](https://michael-fuchs-python.netlify.app/2020/12/21/classification-of-dog-breeds-using-a-pre-trained-cnn-model/)
+A rule of thumb says that a data scientist spends 80% of his time on data preparation. The same amount of code is generated at this point. If you are working on a customer project that is only interested in the results, the notebook in which you are working, for example, is quickly overcrowded with syntax that only refers to the preparation of the data. For such a case it is a good idea to write an ETL-script. 
 
 
 ## Table of Contents
@@ -29,7 +27,7 @@ How I proceeded exactly and what results I achieved can be read in my blog post:
 
 ## Introduction
 
-In the course of this nanodegree from Udacity, as part of the Capstone Project, I created a pipeline that can be used in a web or mobile app to process real images taken by users. Based on a picture of a dog, the algorithm I created can make an assessment about the dog breed. If supplied an image of a human, the code will identify the resembling dog breed.
+In this repository I have stored several variants of ETL pipelines. They serve as a template and can be extended as desired.
 
 <a name="software_requirements"></a>
 
@@ -38,13 +36,9 @@ In the course of this nanodegree from Udacity, as part of the Capstone Project, 
 Required libraries:
 
 + Python 3.x
-+ Scikit-Learn
-+ Keras
-+ TensorFlow
 + Numpy
 + Pandas
-+ Matplotlib
-+ OpenCV
+
 
 Please run ```pip install -r requirements.txt```
 
@@ -55,41 +49,40 @@ Please run ```pip install -r requirements.txt```
 ## Folder Structure
 
 ```
-C:.
-│   dog_app.ipynb
-│   extract_bottleneck_features.py
-│   README.md
-│   requirements.txt
-│
-├───bottleneck_features
-├───data
-│   ├───dog_images
-│   └───lfw
-├───haarcascades
-│       haarcascade_frontalface_alt.xml
-│
-├───images
-│       American_water_spaniel_00648.jpg
-│       border_collie.jpg
-│       Brittany_02625.jpg
-│       Curly-coated_retriever_03896.jpg
-│       dog_breed_main_pic.jpg
-│       german_shepherd_dog.jpg
-│       great_dane.jpg
-│       Labrador_retriever_06449.jpg
-│       Labrador_retriever_06455.jpg
-│       Labrador_retriever_06457.jpg
-│       man.jpg
-│       sample_cnn.png
-│       sample_dog_output.png
-│       sample_human_2.png
-│       sample_human_output.png
-│       Welsh_springer_spaniel_08203.jpg
-│       woman1.jpg
-│       woman2.jpg
-│
-└───saved_models
+├───1_Simple_Pipeline
+│   ├───data
+│   │   ├───input
+│   │   └───output
+│   └───notebooks
+├───2_Pipeline_with_join
+│   ├───data
+│   │   ├───input
+│   │   └───output
+│   └───notebooks
+├───3_Pipeline_with_join2
+│   ├───data
+│   │   ├───input
+│   │   └───output
+│   └───notebooks
+└───4_Pipeline_with_intermediate_storage
+    ├───data
+    │   ├───input
+    │   ├───input_modified
+    │   └───output
+    └───notebooks
 ```
+
+I have built 4 different ETL variants. 
+
++ 1_Simple_Pipeline
++ 2_Pipeline_with_join
++ 3_Pipeline_with_join2
++ 4_Pipeline_with_intermediate_storage
+
+The basic structure of all four variants is the same. 
+Each variant includes a data folder and a folder for the notebooks. 
+With the help of the notebooks I developed the .py file. The etl_pipeline.py files are always stored in the data-folder.
+
 
 
 <a name="getting_started"></a>
@@ -97,7 +90,12 @@ C:.
 ## Getting Started
 
 1. Make sure Python 3 is installed.
-2. Clone the repository and navigate to the project's root directory in the terminal
+2. Clone the repository and navigate to the respective project's root directory in the terminal
+3.  ETL execution
+    1. from jupyter notebook: The ETL file can be executed directly from a Jupyter notebook. A sample procedure can be found under notebooks/Test_Notebook.
+    2. from command line: Use a command line of your choice and navigate to the respective project's root directory. Run the following commands:
+        ```cd "path/to/root directory"```
+        ```python etl_pipeline.py"```
 3. Download the [dog dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip). Unzip the folder and place the three files (test, train and valid) in the cloned repository in the folder ```data/dog_images```. If one of these folders does not yet exist, please create it manually. 
 4. Download the [human dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/lfw.zip). Unzip the folder and place it in the cloned repository in the folder ```data/lfw```. If one of these folders does not yet exist, please create it manually. 
 5. Download the [VGG-19](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogVGG19Data.npz) and [InceptionV3](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogInceptionV3Data.npz) bottleneck features and place them in the cloned repository in the folder ```bottleneck_features```. If this folder does not yet exist, please create it manually. 
