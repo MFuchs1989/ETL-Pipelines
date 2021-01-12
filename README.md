@@ -17,7 +17,7 @@ A rule of thumb says that a data scientist spends 80% of his time on data prepar
     2. [Pipeline_with_join](#pipeline_with_join)
     3. [Pipeline_with_join2](#pipeline_with_join2)
     4. [Pipeline_with_intermediate_storage](#pipeline_with_intermediate_storage)  
-6. [Project Results](#project_results)    
+6. [Link to the Publications](#link_publications)    
 7. [Authors](#authors)
 8. [Motivation](#motivation)
 
@@ -102,16 +102,6 @@ With the help of the notebooks I developed the .py file. The etl_pipeline.py fil
 
 
 
-
-5. [Overview of the ETL steps](#overview)
-    1. [Simple_Pipeline](#simple_pipeline)
-    2. [Pipeline_with_join](#pipeline_with_join)
-    3. [Pipeline_with_join2](#pipeline_with_join2)
-    4. [Pipeline_with_intermediate_storage](#pipeline_with_intermediate_storage)
-
-
-
-
 <a name="overview"></a>
 
 ## Overview of the ETL steps
@@ -132,11 +122,15 @@ In the following I show the individual steps that are used in the respective ETL
 
 ![Overview_Pipeline_with_join](images/Overview_Pipeline_with_join.png)
 
+--------------------------------------------------------------------------------------------------------
+
 <a name="pipeline_with_join2"></a>
 
 ### Pipeline_with_join2
 
 ![Overview_Pipeline_with_join2](images/Overview_Pipeline_with_join2.png)
+
+--------------------------------------------------------------------------------------------------------
 
 <a name="pipeline_with_intermediate_storage"></a>
 
@@ -147,18 +141,19 @@ In the following I show the individual steps that are used in the respective ETL
 Corresponding legend:
 
 ![Legend](images/Legend.png)
+ 
 
+<a name="link_publications"></a>
 
+## Link to the Publications
 
-<a name="project_results"></a>
+For each of the listed ETL variants I have written a separate post. In it I have explained my approach and usage again in detail.
 
-## Project Results
++ [Simple_Pipeline](https://michael-fuchs-python.netlify.app/2020/11/24/etl-simple-pipeline/)
++ [Pipeline_with_join](https://michael-fuchs-python.netlify.app/2020/11/25/etl-pipeline-with-join/)
++ [Pipeline_with_join2](https://michael-fuchs-python.netlify.app/2020/11/26/etl-pipeline-with-join2/)
++ [Pipeline_with_intermediate_storage](https://michael-fuchs-python.netlify.app/2020/11/27/etl-pipeline-with-intermediate-storage/)
 
-In summary, the CNN model I created with transfer learning far surpassed the CNN created from scratch in terms of performance. 
-The accuracy of the InceptionV3-model (pre-trained on ImageNet) reached 79.55% while the CNN from scratch was about 5%.
-The ImageNet dataset contains more than one million training images on which the InceptionV3 model was trained. This results in an extreme increase in performance compared to CNN from scratch. 
-The accuracy of 5% could possibly have been increased again if data augmentation had been used in the model training.
-When tested on new images, the CNN model with transfer learning performed as I expected, not perfect but good enough. 
 
 <a name="authors"></a>
 
